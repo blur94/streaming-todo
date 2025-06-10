@@ -7,7 +7,7 @@ export default function Home() {
   const todos = getTodos();
 
   return (
-    <div className="grid items-center justify-items-center min-h-screen">
+    <div className="flex justify-center items-center flex-col min-h-screen">
       <p>Welcome back</p>
 
       <CustomSuspense headers={header} rows={DynamicSkeleton(header.length)}>

@@ -9,7 +9,9 @@ interface Props {
 export default function CustomSuspense({ children, headers, rows }: Props) {
   return (
     <Suspense fallback={<CustomTable headers={headers} rows={rows} />}>
-      {children}
+      <div className="grid items-center justify-items-center min-h-screen">
+        {children}
+      </div>
     </Suspense>
   );
 }

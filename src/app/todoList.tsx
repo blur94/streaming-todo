@@ -1,7 +1,7 @@
 "use client";
 import { Todo } from "@/actions/todo";
 import { CustomTable } from "@/component/CustomTable";
-import { Box, TableTd, TableTr } from "@mantine/core";
+import { ScrollArea, TableTd, TableTr } from "@mantine/core";
 import Link from "next/link";
 import React, { use } from "react";
 
@@ -33,9 +33,9 @@ export default function TodoList({ todosPromise, headers }: TodoListProps) {
   //   }
 
   return (
-    <Box>
+    <ScrollArea h="calc(100vh - 300px)">
       <CustomTable headers={headers} rows={rows} />
-    </Box>
+    </ScrollArea>
   );
 }
 

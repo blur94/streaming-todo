@@ -4,14 +4,14 @@ import React, { Suspense } from "react";
 import Todo from "./Todo";
 
 interface SingleTodoProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
-export default function SingleTodo({ params }: SingleTodoProps) {
-  const { id } = params;
+export default async function SingleTodo({ params }: SingleTodoProps) {
+  const { id } = await params;
   const todo = getTodo(id);
-  // console.log(todo)
+
   return (
     <Center className="min-h-screen">
       <div>
